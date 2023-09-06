@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@drawable/neww2"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:background="?attr/homeAsUpIndicator"
+        android:backgroundTint="#FFFFFF"
+        android:padding="12dp" />
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:text="SunoPodcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:layout_marginStart="40dp"
+        android:textStyle="bold"
+       />
+    <ImageButton
+        android:id="@+id/drwaer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/baseline_menu_24"
+        android:layout_gravity="end"
+        />
+
+
+</androidx.appcompat.widget.Toolbar>

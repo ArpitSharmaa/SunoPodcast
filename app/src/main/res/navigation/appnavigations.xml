@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appnavigations"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/listOfPodcast"
+        android:name="com.example.sunopodcast.ListOfPodcast"
+        android:label="fragment_list_of_podcast"
+        tools:layout="@layout/fragment_list_of_podcast" >
+        <action
+            android:id="@+id/action_listOfPodcast_to_createPodcast"
+            app:destination="@id/createPodcast" />
+        <action
+            android:id="@+id/action_listOfPodcast_to_listenpodcast"
+            app:destination="@id/listenpodcast" />
+        <action
+            android:id="@+id/action_listOfPodcast_to_loginfragment"
+            app:destination="@id/loginfragment"
+            app:popUpTo="@id/listOfPodcast"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listOfPodcast_to_listenKaroke"
+            app:destination="@id/listenKaroke" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPodcast"
+        android:name="com.example.sunopodcast.CreatePodcast"
+        android:label="fragment_create_podcast"
+        tools:layout="@layout/fragment_create_podcast" >
+        <action
+            android:id="@+id/action_createPodcast_to_livePodCast"
+            app:destination="@id/livePodCast"
+            app:popUpTo="@id/createPodcast"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_createPodcast_to_loginfragment"
+            app:destination="@id/loginfragment"
+            app:popUpTo="@id/createPodcast"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_createPodcast_to_listenKaroke"
+            app:destination="@id/listenKaroke" />
+    </fragment>
+    <fragment
+        android:id="@+id/livePodCast"
+        android:name="com.example.sunopodcast.LivePodCast"
+        android:label="fragment_live_pod_cast"
+        tools:layout="@layout/fragment_live_pod_cast" >
+        <action
+            android:id="@+id/action_livePodCast_to_listOfPodcast"
+            app:destination="@id/listOfPodcast"
+            app:popUpTo="@id/livePodCast"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_livePodCast_to_loginfragment"
+            app:destination="@id/loginfragment"
+            app:popUpTo="@id/livePodCast"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_livePodCast_to_listenKaroke"
+            app:destination="@id/listenKaroke" />
+    </fragment>
+    <fragment
+        android:id="@+id/listenpodcast"
+        android:name="com.example.sunopodcast.listenpodcast"
+        android:label="fragment_listenpodcast"
+        tools:layout="@layout/fragment_listenpodcast" >
+        <action
+            android:id="@+id/action_listenpodcast_to_loginfragment"
+            app:destination="@id/loginfragment"
+            app:popUpTo="@id/listenpodcast"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listenpodcast_to_createPodcast"
+            app:destination="@id/createPodcast" />
+        <action
+            android:id="@+id/action_listenpodcast_to_listenKaroke"
+            app:destination="@id/listenKaroke" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerationfragment"
+        android:name="com.example.sunopodcast.registerationfragment"
+        android:label="fragment_registerationfragment"
+        tools:layout="@layout/fragment_registerationfragment" >
+        <action
+            android:id="@+id/action_registerationfragment_to_loginfragment"
+            app:destination="@id/loginfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginfragment"
+        android:name="com.example.sunopodcast.loginfragment"
+        android:label="fragment_loginfragment"
+        tools:layout="@layout/fragment_loginfragment" >
+        <action
+            android:id="@+id/action_loginfragment_to_registerationfragment"
+            app:destination="@id/registerationfragment" />
+        <action
+            android:id="@+id/action_loginfragment_to_listOfPodcast"
+            app:destination="@id/listOfPodcast"
+            app:popUpTo="@id/loginfragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/karokelistfrag"
+        android:name="com.example.sunopodcast.Karokelistfrag"
+        android:label="fragment_karokelistfrag"
+        tools:layout="@layout/fragment_karokelistfrag" >
+        <action
+            android:id="@+id/action_karokelistfrag_to_loginfragment"
+            app:destination="@id/loginfragment"
+            app:popUpTo="@id/karokelistfrag"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/listenKaroke"
+        android:name="com.example.sunopodcast.ListenKaroke"
+        android:label="ListenKaroke" >
+        <action
+            android:id="@+id/action_listenKaroke_to_karokelistfrag"
+            app:destination="@id/karokelistfrag" />
+        <action
+            android:id="@+id/action_listenKaroke_to_loginfragment"
+            app:destination="@id/loginfragment"
+            app:popUpTo="@id/listenKaroke"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sunopodcast.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginfragment"
+            app:destination="@id/loginfragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
